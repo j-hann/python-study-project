@@ -1,0 +1,27 @@
+
+# 가상환경
+.venv/
+venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*$py.class
+
+# Django
+*.sqlite3
+db.sqlite3
+*.log
+
+# 환경 변수 파일
+.env
+*.env
+
+# PyCharm
+.idea/
+
+# Windows
+Thumbs.db
