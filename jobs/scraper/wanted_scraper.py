@@ -16,41 +16,6 @@ block_keywords = ["프론트엔드", "frontend", "React", "스마트팩토리"]
 # 상세 설명 데이터 목록
 description_keywords = ["주요업무", "자격요건"]
 
-
-# 상세 설명 데이터 스크래핑 - 주요업무, 자격요건, 우대사항
-# def scrape_description_selections(context, url):
-#     try:
-#         detail_page = context.new_page()
-#         detail_page.goto(url)
-#         detail_page.wait_for_selector("div.JobDescription_JobDescription__paragraph__87w8I", timeout=5000)
-#
-#         blocks = detail_page.query_selector_all("div.JobDescription_JobDescription__paragraph__87w8I")
-#         extracted = {}
-#
-#         for block in blocks:
-#             heading = block.query_selector("h3")
-#
-#             if heading:
-#                 title = heading.inner_text().strip()
-#                 if title in description_keywords:
-#                     # h3 제외한 나머지 텍스트 추출
-#                     full_text = block.inner_text().strip()
-#                     content_text = full_text.replace(title, "").strip()
-#                     extracted[title] = content_text.replace("\n", "\nㆍ")
-#
-#         detail_page.close()
-#
-#         parts = []
-#         for label in description_keywords:
-#             if label in extracted:
-#                 parts.append(f"[{label}]\n{extracted[label]}")
-#
-#         return "\n\n".join(parts)
-#
-#     except Exception as e:
-#         print(f"상세 설명 파싱 실패 ({url}):", e)
-#         return ""
-
 # 원티드 공고 스크래핑
 def scrape_wanted_jobs():
     with sync_playwright() as p:
