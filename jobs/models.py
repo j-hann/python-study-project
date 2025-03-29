@@ -9,6 +9,8 @@ class JobPost(models.Model):
     title = models.CharField(max_length=255)
     # 회사명
     company = models.CharField(max_length=255)
+    # 회사 위치, 경력
+    location_experience = models.CharField(max_length=255)
     # url 주소
     url = models.URLField()
     # 설명
